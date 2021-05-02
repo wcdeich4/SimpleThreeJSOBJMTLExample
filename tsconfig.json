@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "strict": false,
+        "noImplicitAny": false,
+        "strictNullChecks": false,
+        "strictFunctionTypes": false,
+        "strictBindCallApply": false,
+        "strictPropertyInitialization": false,
+        "noImplicitThis": false,
+        "alwaysStrict": false, 
+        "noUnusedLocals": false,
+        "noUnusedParameters": false, 
+        "noImplicitReturns": false,
+        "noFallthroughCasesInSwitch": false, 
+        "noUncheckedIndexedAccess": false,
+        "noPropertyAccessFromIndexSignature": false,
+        "allowSyntheticDefaultImports": true, 
+        "esModuleInterop": true, 
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": false,
+        "module": "es6",
+        "target": "es5",
+        "allowJs": true,
+        "moduleResolution": "node"
+    }
+}

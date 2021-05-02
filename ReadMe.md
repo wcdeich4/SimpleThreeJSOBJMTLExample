@@ -1,0 +1,1 @@
+Typescript Three.JS OBJ with MTL example transpilled by Webpack
