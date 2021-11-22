@@ -4,7 +4,6 @@
   "description": "simple webpack example",
   "main": "index.js",
   "scripts": {
-    "serve": "webpack",
     "watch": "webpack --watch",
     "build-dev": "webpack --mode=development",
     "build-prod": "webpack --mode=production"
