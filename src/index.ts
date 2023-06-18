@@ -1,8 +1,8 @@
-import * as THREE from 'three/build/three.module.js';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
-import { MTLLoader } from  'three/examples/jsm/loaders/MTLLoader.js';
+import * as THREE from 'three';
+import { OBJLoader } from './OBJLoader.js';
+import { MTLLoader } from  './MTLLoader.js';
 import './styles.scss';
-import './frog.png'; //needed to copy to output
+//import './frog.png'; //needed import images to copy to output
 class Program
 {
   private static currentTime: number;
@@ -12,7 +12,7 @@ class Program
 
   private static renderer: THREE.WebGLRenderer; 
   private static canvas: HTMLCanvasElement; 
-  private static renderingContext: WebGLRenderingContext;
+//  private static renderingContext: WebGLRenderingContext;
   //= new THREE.WebGLRenderer( { canvas: document.getElementById('CanvasID') as HTMLCanvasElement } );
   
   private static scene: THREE.Scene;
@@ -40,14 +40,14 @@ class Program
     Program.camera.position.set(0, 5, 12);
 
     const mtlLoader = new MTLLoader();
-    mtlLoader.load('http://localhost:5000/Can.mtl',
+    mtlLoader.load('https://raw.githubusercontent.com/wcdeich4/OBJSamples/main/Can.mtl',
         (materials) => {
             materials.preload();
 
             const objLoader: OBJLoader = new OBJLoader();
             objLoader.setMaterials(materials);
             objLoader.load(
-                'http://localhost:5000/Can.obj',
+                'https://raw.githubusercontent.com/wcdeich4/OBJSamples/main/Can.obj',
                 (object) => {
                     Program.mesh = object;
                     Program.scene.add(object);
